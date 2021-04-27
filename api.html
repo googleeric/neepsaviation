@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="fetch">Click</button>
+    <div class="message"></div>
+    <script>
+        $(document).ready(function(){
+            // function fetch(){
+                $.ajax({
+                url: "http://172.16.18.20:20058/ws_egservice_00P_get_item_incremental_details?cindex=item_master_details&t_time=2020-04-30",
+                type: "POST",
+                dataType:"JSON",
+                data:JSON.stringify({ }),
+                success:function(data){
+                   console.log(data);   
+                }
+            })
+        })
+            // }
+    // }
+    </script>
+</body>
+</html>
